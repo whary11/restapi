@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func getOutboundIP() string {
+func GetOutboundIP() string {
 	conn, _ := net.Dial("udp", "8.8.8.8:80")
 	defer conn.Close()
 	localAddr := conn.LocalAddr().String()

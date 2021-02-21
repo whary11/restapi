@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"github.com/whary11/restapi/database"
+	"restapi/database"
 
 	"github.com/gin-gonic/gin"
 )

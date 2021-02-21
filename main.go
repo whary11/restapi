@@ -1,14 +1,18 @@
 package main
 
 import (
+	"fmt"
+	"restapi/utils"
+
+	"restapi/controllers"
+
 	"github.com/gin-gonic/gin"
-	"github.com/whary11/restapi/controllers"
 )
 
 func main() {
 
 	route := gin.Default()
 	route.GET("/get_user/:id", controllers.HomeHandler)
-
-	route.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
+	fmt.Println(utils.GetOutboundIP())
+	route.Run(":5000") // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
